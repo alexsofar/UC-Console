@@ -10,7 +10,7 @@ namespace UC_Console
     {
         static void Main()
         {
-            DirectoryHandler dir = new DirectoryHandler();
+            DirectoryHandler dir = new DirectoryHandler(@"c:\\");
 
             dir.OpenDirectory();
 

@@ -9,19 +9,24 @@ namespace UC_Console
 {
     class DirectoryHandler
     {
+        //Field
         private string DirPath;
 
         public int CountItem;
 
         private List<string> DirsList;
 
-        public DirectoryHandler()
+        //Constructor
+        public DirectoryHandler(string dirPath)
         {
-            this.DirPath = @"c:\\";
+            this.DirPath = dirPath;
             this.DirsList = new List<string>(Directory.EnumerateDirectories(DirPath));
             this.CountItem = DirsList.Count;
         }
 
+        /// <summary>
+        /// Enumerates the directory names for path defined as designer arguments
+        /// </summary
         public void OpenDirectory()
         {
             this.DirsList = new List<string>(Directory.EnumerateDirectories(DirPath));
